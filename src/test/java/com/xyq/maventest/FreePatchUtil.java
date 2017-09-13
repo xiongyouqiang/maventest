@@ -28,7 +28,7 @@ public class FreePatchUtil {
       
     public static String version="";//补丁版本  
     
-    private static SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    private static SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddhhmmss");
     
     
       static {
