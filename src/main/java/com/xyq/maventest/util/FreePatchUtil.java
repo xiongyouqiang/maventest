@@ -13,20 +13,40 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/***
+ * 
+ * @author youqiang.xiong
+ *
+ */
 public class FreePatchUtil {
 
-	  
-    public static String patchFile="E:\\workplaces\\EC_TAOBAO\\patch.txt";//补丁文件,由eclipse svn plugin生成  
-      
-    public static String projectPath="E:\\workplaces\\EC_TAOBAO";//项目文件夹路径  
-      
-    public static String webContent="WebContent";//web应用文件夹名  
-      
-    public static String classPath="E:\\workplaces\\EC_TAOBAO\\WebContent\\WEB-INF\\classes";//class存放路径  
-      
-    public static String desPath="C:\\Users\\youqiang.xiong\\Desktop\\update_pkg";//补丁文件包存放路径  
-      
-    public static String version="";//补丁版本  
+	public static String projectName = "EC_TAOBAO_ORDER";
+	public static String baseDir = "E:\\workplaces\\";
+	
+	/**
+	 * 补丁文件,由eclipse svn plugin生成
+	 */
+    public static String patchFile=baseDir+projectName+"\\patch.txt";  
+    /**
+     * 项目文件夹路径  
+     */
+    public static String projectPath=baseDir +projectName;
+    /**
+     * web应用文件夹名  
+     */
+    public static String webContent="WebContent";
+    /***
+     * class存放路径  
+     */
+    public static String classPath=baseDir+projectName+"\\WebContent\\WEB-INF\\classes";
+   /***
+    * 补丁文件包存放路径  
+    */
+    public static String desPath="C:\\Users\\youqiang.xiong\\Desktop\\update_pkg";
+    /***
+     * 补丁版本
+     */
+    public static String version="";  
     
     private static SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddhhmmss");
     
@@ -66,13 +86,14 @@ public class FreePatchUtil {
     }  
     
     /***
-     * 
+     * 拷贝文件
      * @param list 修改的文件
      */
     public static void copyFiles(List<String> list){  
           
         for(String fullFileName:list){  
-            if(fullFileName.indexOf("src/")!=-1){//对源文件目录下的文件处理  
+        	//对源文件目录下的文件处理  
+            if(fullFileName.indexOf("src/")!=-1){
                 String fileName=fullFileName.replace("src","");  
                 fullFileName=classPath+fileName;  
                 if(fileName.endsWith(".java")){  
@@ -92,7 +113,8 @@ public class FreePatchUtil {
                 copyInnerClassFile(fullFileName, desFileNameStr);
             }else{//对普通目录的处理  
                 String desFileName=fullFileName.replaceAll(webContent,"");  
-                fullFileName=projectPath+"/"+fullFileName;//将要复制的文件全路径  
+                //将要复制的文件全路径  
+                fullFileName=projectPath+"/"+fullFileName;
                 String fullDesFileNameStr=desPath+"/"+version+desFileName;  
                 String desFilePathStr=fullDesFileNameStr.substring(0,fullDesFileNameStr.lastIndexOf("/"));  
                 File desFilePath=new File(desFilePathStr);  
@@ -169,10 +191,12 @@ public class FreePatchUtil {
             outBuff.flush();  
         } finally {  
             // 关闭流  
-            if (inBuff != null)  
-                inBuff.close();  
-            if (outBuff != null)  
-                outBuff.close();  
+            if (inBuff != null){
+            	inBuff.close();  
+            }
+            if (outBuff != null){
+            	outBuff.close();  
+            }
         }  
     }  
 }

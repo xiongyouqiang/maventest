@@ -1,6 +1,13 @@
 package com.xyq.maventest.util;
 
+/***
+ * 
+ * @author youqiang.xiong
+ *
+ */
 public class AlgorithmUtil {
+	
+	private static final Integer FOR_NUMBER = 10;
 
 	public static void main(String[] args) {
 		
@@ -29,7 +36,7 @@ public class AlgorithmUtil {
 		
 		StringBuffer sb = new StringBuffer();
 		
-		if(n < 10){
+		if(n < FOR_NUMBER){
 			sb.append("0").append(n);
 		}else{
 			sb.append(n);
