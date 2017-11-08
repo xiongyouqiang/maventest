@@ -30,8 +30,12 @@ public class App
         persons.add(p3);
         persons.add(p4);
         
-        Collections.sort(persons, new PersonComp());
+        System.out.println("排序前...");
+        System.out.println(gson.toJson(persons));
         
+        Collections.sort(persons, new PersonComp());
+ 
+        System.out.println("排序后...");
         System.out.println(gson.toJson(persons));
     }
     
