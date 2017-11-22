@@ -20,8 +20,8 @@ import java.util.List;
  */
 public class FreePatchUtil {
 
-	public static String projectName = "EC_TAOBAO_ORDER";
-	public static String baseDir = "E:\\workplaces\\";
+	public static final String projectName = "EC_TAOBAO";
+	public static final String baseDir = "E:\\workplaces\\";
 	
 	/**
 	 * 补丁文件,由eclipse svn plugin生成
