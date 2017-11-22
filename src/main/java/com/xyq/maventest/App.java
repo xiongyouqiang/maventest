@@ -35,6 +35,7 @@ public class App
         
         Collections.sort(persons, new PersonComp());
  
+        
         System.out.println("排序后...");
         System.out.println(gson.toJson(persons));
     }
@@ -49,6 +50,8 @@ public class App
 		}
     	 
      }
+     
+   
     
     
 }
