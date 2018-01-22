@@ -8,9 +8,13 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.xyq.maventest.bean.Person;
 
-/**
- * Hello world!
- *
+/****
+ * 测试l
+* @ClassName: App 
+* @Description:  
+* @author youqiang.xiong
+* @date 2018年1月15日 下午3:59:49 
+*
  */
 public class App 
 {
@@ -30,13 +34,13 @@ public class App
         persons.add(p3);
         persons.add(p4);
         
-        System.out.println("排序�?...");
+        System.out.println("排序�?...");
         System.out.println(gson.toJson(persons));
         
         Collections.sort(persons, new PersonComp());
  
         
-        System.out.println("排序�?...");
+        System.out.println("排序�?...");
         System.out.println(gson.toJson(persons));
     }
     

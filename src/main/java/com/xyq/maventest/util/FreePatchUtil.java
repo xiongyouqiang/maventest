@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class FreePatchUtil {
 
-	public static final String projectName = "EC_TAOBAO";
+	public static final String projectName = "EC_OFFICIAL_APPLETS";
 	public static final String baseDir = "E:\\workplaces\\";
 	
 	/**
