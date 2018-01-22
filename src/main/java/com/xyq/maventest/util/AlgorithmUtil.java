@@ -1,9 +1,10 @@
 package com.xyq.maventest.util;
 
-/***
+/*****
  * 
  * @author youqiang.xiong
- *
+ * <p> TODO 简单描述此类的用途</p>
+ * 2018年1月6日上午10:22:33
  */
 public class AlgorithmUtil {
 	
