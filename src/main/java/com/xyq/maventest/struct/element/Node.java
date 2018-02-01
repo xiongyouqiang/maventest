@@ -7,10 +7,13 @@
  */
 package com.xyq.maventest.struct.element;
 
-/****
- * linkedlist存放数据的节点
- * @author lenovo
- *
+/***
+ * 
+* @ClassName: Node 
+* @Description: linkedList的节点对象 
+* @author youqiang.xiong
+* @date 2018年1月23日 上午11:53:15 
+*
  */
 public class Node{
 	

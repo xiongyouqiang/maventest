@@ -1,7 +1,14 @@
 package com.xyq.maventest.struct;
 
 import com.xyq.maventest.struct.element.Node;
-
+/****
+ * 自定义的链表
+* @ClassName: MyLinkedList 
+* @Description:  
+* @author youqiang.xiong
+* @date 2018年1月23日 上午11:53:40 
+*
+ */
 public class MyLinkedList {
 
 	private Node head = null;

@@ -120,6 +120,7 @@ public class CollectionTest {
 	
 	@Test
 	public void testDemo4(){
+	
 		
 		List<String> list = new ArrayList<String>();
 		list.add("b");
@@ -213,6 +214,7 @@ public class CollectionTest {
 	}
 	
 	
+	@SuppressWarnings({ "rawtypes", "unused" })
 	private void reomveDuplicateByFor(List list){
 		
 		for (int i = 0; i < list.size(); i++) {
@@ -224,13 +226,15 @@ public class CollectionTest {
 		}
 	}
 	
-	public void removeDuplicateByHashSet(List list) {    
-	      HashSet h = new HashSet(list);    
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public void removeDuplicateByHashSet( List<?> list) {    
+		HashSet h = new HashSet(list);    
 	      list.clear();    
 	      list.addAll(h);    
 	}  
 	
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void removeDuplicateWithOrder(List list) {
 		Set set = new HashSet();
 		List newList = new ArrayList();

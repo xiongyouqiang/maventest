@@ -25,7 +25,12 @@
 			<version>4.11</version>
 		</dependency>
 
-
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.5.4</version>
+		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -93,11 +98,6 @@
 			<groupId>com.trendy</groupId>
 			<artifactId>trendy-framework</artifactId>
 			<version>0.2.7</version>
-		</dependency>
-		<dependency>
-			<groupId>com.xyq</groupId>
-			<artifactId>maven</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
 		<dependency>
