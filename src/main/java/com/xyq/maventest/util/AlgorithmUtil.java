@@ -15,7 +15,7 @@ public class AlgorithmUtil {
 		int n = 4;
 
 		printData(n);
-		;
+		
 	}
 
 	public static void printData(int n) {
