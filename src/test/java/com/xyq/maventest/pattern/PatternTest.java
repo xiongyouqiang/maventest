@@ -23,11 +23,14 @@ public class PatternTest {
 		
 		Singleton s1 = Singleton.getInstance();
 		Singleton s2 = Singleton.getInstance();
-		
-		if(s1==s2){
-			log.info("s1 is the same as s2");
-		}else{
-			log.info("s1 is not the same as s2");
+		System.out.println(log.isDebugEnabled()+"---"+log.isInfoEnabled());
+		if(log.isInfoEnabled()){
+			
+			if(s1==s2){
+				log.info("s1 is the same as s2");
+			}else{
+				log.info("s1 is not the same as s2");
+			}
 		}
 	}
 	

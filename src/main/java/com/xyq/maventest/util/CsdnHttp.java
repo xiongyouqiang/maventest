@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -138,24 +139,26 @@ public class CsdnHttp {
     }
 
     
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException {/*
     	final CsdnHttp http = new CsdnHttp();
         // 测试GET请求
-//    	for(int i= 1;i <= MAX_REQUEST_COUNT; i++){
-//    		Thread t  = new Thread(new Runnable() {
-//				
-//				@Override
-//				public void run() {
-//					http.get();
-//				}
-//			});
-//    		
-//    		t.start();
-//    		
-//    	}
+    	for(int i= 1;i <= MAX_REQUEST_COUNT; i++){
+    		Thread t  = new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					http.get();
+				}
+			});
+    		
+    		t.start();
+    		
+    	}
     	while(true){
     		http.get();
     		Thread.sleep(1000);
     	}
+    */
+    	 System.out.println(Objects.equals("test", "test"));
     }
 }
