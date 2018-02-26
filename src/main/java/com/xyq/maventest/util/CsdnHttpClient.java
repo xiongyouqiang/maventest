@@ -17,8 +17,15 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
-public class CsdnHttp {
+/*****
+* 
+* @ClassName: CsdnHttpClient 
+* @Description: TODO(这里用一句话描述这个类的作用) 
+* @author youqiang.xiong
+* @date 2018年2月26日 下午12:07:33 
+*
+ */
+public class CsdnHttpClient {
 
 	 // 发送请求的url
     public static final String REQUEST_URL = "http://blog.csdn.net/xiongyouqiang/article/GetRelatedArticles?pageindex=2&articleId=79166115";
@@ -139,7 +146,7 @@ public class CsdnHttp {
 
     
     public static void main(String[] args) throws InterruptedException {
-    	final CsdnHttp http = new CsdnHttp();
+    	final CsdnHttpClient http = new CsdnHttpClient();
         // 测试GET请求
     	for(int i= 1;i <= MAX_REQUEST_COUNT; i++){
     		Thread t  = new Thread(new Runnable() {
