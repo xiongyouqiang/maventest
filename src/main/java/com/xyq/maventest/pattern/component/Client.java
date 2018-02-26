@@ -27,6 +27,10 @@ public class Client {
 		
 	}
 	
+	/***
+	 * 循环遍历该员工的姓名以及各层次下属员工的姓名
+	 * @param pm
+	 */
 	public static void printAll(Employer pm){
 		
 		for(Employer emp:pm.getEmployers()){

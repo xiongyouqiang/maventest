@@ -1,7 +1,14 @@
 package com.xyq.maventest.pattern.component;
 
 import java.util.List;
-
+/****
+ * 
+* @ClassName: Employer 
+* @Description: TODO(这里用一句话描述这个类的作用) 
+* @author youqiang.xiong
+* @date 2018年2月26日 上午10:02:32 
+*
+ */
 public abstract class Employer {
 
 	//员工姓名
@@ -13,6 +20,8 @@ public abstract class Employer {
 	public abstract void add(Employer employer);
 	
 	public abstract void remove(Employer employer);
+	
+	
 	
 	public List<Employer> getEmployers() {
 		return employers;
