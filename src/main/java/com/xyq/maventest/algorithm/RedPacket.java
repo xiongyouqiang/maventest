@@ -8,15 +8,16 @@ import java.util.Random;
  * <p> 模拟微信发红包的算法封装</p>
  * 2018年2月25日下午8:04:19
  */
+
 public class RedPacket {
 	
 	
 	public static void main(String[] args) {
 		
 		// 微信红包拆分测试
-        double money = 10;
+        double money = 10;  //单位（元）
         int num = 6;
-        System.out.println("总金额："+money+"\t 红包总个数:" + num);
+        System.out.println("总金额："+money+"元\t 红包总个数:" + num);
         int[]  array = divived(money,num);
 
         System.out.println("拆分后的各个红包金额数如下:");
