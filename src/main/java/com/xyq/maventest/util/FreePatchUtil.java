@@ -20,7 +20,9 @@ import java.util.List;
  */
 public class FreePatchUtil {
 
-	public static final String projectName = "EC_CCP";
+//	public static final String projectName = "EC_CCP";
+//	public static final String projectName = "EC_TAOBAO";
+	public static final String projectName = "EC_OFFICIAL_APPLETS";
 	public static final String baseDir = "E:\\workplaces\\";
 	
 	/**
@@ -172,6 +174,7 @@ public class FreePatchUtil {
       
       
     public static void copyFile(File sourceFile, File targetFile) throws IOException {  
+    	if(!sourceFile.isFile()) return;
         BufferedInputStream inBuff = null;  
         BufferedOutputStream outBuff = null;  
         try {  

@@ -1,6 +1,7 @@
 package com.xyq.maventest.collection;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -213,6 +214,42 @@ public class CollectionTest {
 		}
 	}
 	
+	@Test
+	public void testArrayList(){
+		
+		List<String> list = new ArrayList<String>(2);
+		list.add("guan");
+		list.add("bao");
+		String[] array = new String[list.size()];
+		array = list.toArray(array);
+		System.out.println(array);
+	}
+	
+	@Test
+	public void testAsList(){
+		String[] str = new String[] { "you", "wu", "ta" }; 
+		
+		List<String> list = Arrays.asList(str);
+		System.out.println("原数组:");
+		for (String string : list) {
+			System.out.println(string);
+		}
+		
+		str[2] = "ni";
+		System.out.println("修改后数组:");
+		for (String string : list) {
+			System.out.println(string);
+		}
+		
+		list.add("women");
+	}
+	
+	@Test
+	public void testDemo7(){
+		
+		
+	}
+	
 	
 	@SuppressWarnings({ "rawtypes", "unused" })
 	private void reomveDuplicateByFor(List list){
@@ -227,10 +264,10 @@ public class CollectionTest {
 	}
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public void removeDuplicateByHashSet( List<?> list) {    
+	public void removeDuplicateByHashSet(List<?> list) {    
 		HashSet h = new HashSet(list);    
-	      list.clear();    
-	      list.addAll(h);    
+	    list.clear();    
+	    list.addAll(h);    
 	}  
 	
 	

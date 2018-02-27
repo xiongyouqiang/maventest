@@ -1,10 +1,10 @@
 package com.xyq.maventest.pattern.adapter;
 
-public class Adater implements Target {
+public class Adapter implements Target {
 
 	private Adaptee  adaptee;
 	
-	public Adater(){
+	public Adapter(){
 		adaptee = new Adaptee();
 	}
 	

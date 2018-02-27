@@ -43,15 +43,16 @@ Thumbs.db
 .gradle
 
 # Build output directies
-/target/*
+/target
 */target
-/target/
+*/target/*
 /log
 */log
 /build
 */build
 var
 logs
+
 
 # IntelliJ specific files/directories
 out
