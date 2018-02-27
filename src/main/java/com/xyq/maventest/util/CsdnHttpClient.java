@@ -18,8 +18,8 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 /*****
-* 
-* @ClassName: CsdnHttpClient 
+ * 
+* @ClassName: CsdnHttp 
 * @Description: TODO(这里用一句话描述这个类的作用) 
 * @author youqiang.xiong
 * @date 2018年2月26日 下午12:07:33 
