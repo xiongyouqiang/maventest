@@ -25,12 +25,19 @@
 			<version>4.11</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
-		<dependency>
-		    <groupId>org.apache.httpcomponents</groupId>
-		    <artifactId>httpclient</artifactId>
-		    <version>4.5.4</version>
-		</dependency>
+		 <!-- apache开源组织的jar包 -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.4</version>
+        </dependency>
+        <!-- apache提供的工具jar，包含 字符串，数字、反射等工具类-->
+        <dependency>  
+          <groupId>commons-lang</groupId>  
+          <artifactId>commons-lang</artifactId>  
+          <version>2.6</version>  
+        </dependency>
+        
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
@@ -64,12 +71,16 @@
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.21</version>
 		</dependency>
-
+		
+		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
 		<dependency>
-			<groupId>com.trendy</groupId>
-			<artifactId>proxool</artifactId>
-			<version>0.9.1</version>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>2.9.0</version>
 		</dependency>
+		
+
+		
 		<dependency>
 			<groupId>struts</groupId>
 			<artifactId>struts-tiles-el</artifactId>
@@ -88,23 +99,8 @@
 			<type>tld</type>
 		</dependency>
 
-		<dependency>
-			<groupId>com.trendy</groupId>
-			<artifactId>trendy-tools</artifactId>
-			<version>2.0.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.trendy</groupId>
-			<artifactId>trendy-framework</artifactId>
-			<version>0.2.7</version>
-		</dependency>
+	
 		
-		<dependency>
-			<groupId>us.codecraft</groupId>
-			<artifactId>tiny-ioc</artifactId>
-			<version>0.1.1-SNAPSHOT</version>
-		</dependency>
 
 		<!-- http://repo1.maven.org/maven2/com/xuxueli/xxl-excel-core/ -->
 		<dependency>
