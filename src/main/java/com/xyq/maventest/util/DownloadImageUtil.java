@@ -36,11 +36,11 @@ public class DownloadImageUtil {
 	/***
 	 * 请求的网址url常量
 	 */
-	public static final String REQUEST_URL = "https://www.cnblogs.com/EasonJim/p/6919369.html";
+	public static final String REQUEST_URL = "https://www.w3cschool.cn/git/git-workspace-index-repo.html";
 	/****
 	 * 图片保存路径
 	 */
-	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\image\\test";
+	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\image\\git";
 	
 	/***
 	 *  获取img标签正则表达式
@@ -50,6 +50,7 @@ public class DownloadImageUtil {
      * 获取src路径的正则  
      */
     public static final String IMGSRC_REG = "(http|https):\"?(.*?)(\"|>|\\s+)"; 
+    //<img src="//statics.w3cschool.cn/images/w3c/app-qrcode2.png" alt="扫码下载APP" width="150" height="150">
     
     
     public static String[] IMAGE_TYPE_SUFFIX = new String[]{"=png","=jpg","=jpeg",".png",".jpg","jpeg"};
@@ -62,6 +63,9 @@ public class DownloadImageUtil {
 		
 		//第一步通过请求url解析出响应内容
 		String htmlContent = parseContext(REQUEST_URL);
+		if(StringUtils.isEmpty(htmlContent)){
+			System.out.println("请求URL:【"+REQUEST_URL+"】无法响应");
+		}
 		//通过正则表达式匹配，取出data-src的图片链接存放到list数组中
 		//<img class="" data-ratio="0.5993031358885017" data-src="https://mmbiz.qpic.cn/mmbiz_png/dkwuWwLoRK8POMmicDvKwHwYrqrG7KyiaCGBdaib7rOlRlCSfLqaecaXeJvyRGwZZyvmvL9YGiaicNlLs6jlLKaia1icA/640?wx_fmt=png" data-type="png" data-w="861" height="516" style="margin: auto;max-width: 80%;box-sizing: inherit;-webkit-tap-highlight-color: transparent;border-width: initial;border-style: none;border-color: initial;" width="861"  />
 		List<String> imageUrlList = getImageSrc(htmlContent);
@@ -82,7 +86,7 @@ public class DownloadImageUtil {
 	/***
 	 * 解析图片url路径，保存到对应目录下
 	 * @param oldUrl 图片链接url
-	 * @param savePath 图片报错路径
+	 * @param savePath 图片保存路径
 	 * @throws Exception
 	 */
 	public static void download(String oldUrl,String savePath) throws Exception {
@@ -171,11 +175,14 @@ public class DownloadImageUtil {
 			// 执行get请求.
 			CloseableHttpResponse response = httpclient.execute(httpGet);
 			try {
-				// 获取响应实体
-				HttpEntity entity = response.getEntity();
-				if (entity != null) {
-					html = EntityUtils.toString(entity);
+				if(response.getStatusLine().getStatusCode() == 200){
+					// 获取响应实体
+					HttpEntity entity = response.getEntity();
+					if (entity != null) {
+						html = EntityUtils.toString(entity);
+					}
 				}
+			
 			} finally {
 				response.close();
 			}
@@ -237,7 +244,8 @@ public class DownloadImageUtil {
     	
         List<String> listImgSrc = new ArrayList<String>();  
         
-        for (String imageContext : listImageUrl) {  
+        for (String imageContext : listImageUrl) {
+        	imageContext = appendHttp(imageContext);
             Matcher matcher = Pattern.compile(IMGSRC_REG).matcher(imageContext);  
             while (matcher.find()) {  
                 listImgSrc.add(matcher.group().substring(0, matcher.group().length() - 1));  
@@ -245,6 +253,20 @@ public class DownloadImageUtil {
         }  
         return listImgSrc;  
     } 
-	
+    /*****
+     * 验证img标签中的src属性是否包含http|htpps 如果不包含，则添加协议头
+     * @param imgStr
+     * @return
+     */
+    private static String appendHttp(String imgStr){
+    	//img标签中的src中缺少http|https开头，则添加http协议头
+    	if(!imgStr.contains("src=\"http") &&  !imgStr.contains("src=\"https")){
+    		imgStr = imgStr.replace("src=\"", "src=\"http:");
+    	}
+    	return imgStr;
+    }
 	
 }
+
+
+
