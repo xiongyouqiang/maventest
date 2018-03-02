@@ -11,10 +11,11 @@ public class ThreadPrintData {
 
 	private static int i = 0;
 	private static int wait = 1;
-	private static final int TOTAL = 1000;
+	private static final int TOTAL = 100;
 
 	
 	public static void main(String[] args) {
+		
 		Thread thread1 = new Thread() {
 			public void run() {
 				while (i <= TOTAL) {
