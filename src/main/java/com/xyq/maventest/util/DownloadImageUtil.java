@@ -36,11 +36,11 @@ public class DownloadImageUtil {
 	/***
 	 * 请求的网址url常量
 	 */
-	public static final String REQUEST_URL = "https://www.w3cschool.cn/git/git-workspace-index-repo.html";
+	public static final String REQUEST_URL = "https://mp.weixin.qq.com/s/vaReh48X49UqzzqBMEH3JQ";
 	/****
 	 * 图片保存路径
 	 */
-	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\image\\git";
+	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\image\\CountDownLatch";
 	
 	/***
 	 *  获取img标签正则表达式

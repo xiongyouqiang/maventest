@@ -3,8 +3,8 @@ package com.xyq.maventest.algorithm;
 /****
  * 算法工具类，提供主流的排序算法
  * 1、冒牌排序
- * 2、
-* @ClassName: ArithemticUtil
+ * 
+* @ClassName: SortingAlgorithm
 * @Description: TODO
 * @author youqiang.xiong
 * @date 2018年2月27日
