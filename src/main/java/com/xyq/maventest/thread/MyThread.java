@@ -31,8 +31,7 @@ public class MyThread extends Thread {
 //		Common c1 = new Common();
 		MyThread t2 = new MyThread("MyThread-2", 1, c);
 		MyThread t3 = new MyThread("MyThread-3", 0, c);
-		t1.
-		start();
+		t1.start();
 		t2.start();
 		t3.start();
 	}
