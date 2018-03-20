@@ -36,11 +36,11 @@ public class DownloadImageUtil {
 	/***
 	 * 请求的网址url常量
 	 */
-	public static final String REQUEST_URL = "http://www.trendianoonline.com/Employee_sale_Jan/male/Hoodies_Knitwears/list.shtml";
+	public static final String REQUEST_URL = "https://yq.aliyun.com/articles/2597";
 	/****
 	 * 图片保存路径
 	 */
-	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\image\\trediano";
+	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\image\\maven";
 	
 	/***
 	 *  获取img标签正则表达式
