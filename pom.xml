@@ -78,26 +78,12 @@
 		    <artifactId>jedis</artifactId>
 		    <version>2.9.0</version>
 		</dependency>
-		
-
-		
-		<dependency>
-			<groupId>struts</groupId>
-			<artifactId>struts-tiles-el</artifactId>
-			<version>1.2.8</version>
-			<type>tld</type>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.ibatis</groupId>
 			<artifactId>ibator</artifactId>
 			<version>1.2.1.681</version>
 		</dependency>
-		<dependency>
-			<groupId>struts</groupId>
-			<artifactId>struts-logic</artifactId>
-			<version>1.2.8</version>
-			<type>tld</type>
-		</dependency>
+
 
 	
 		

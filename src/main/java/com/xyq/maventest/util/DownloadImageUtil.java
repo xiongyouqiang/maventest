@@ -36,11 +36,11 @@ public class DownloadImageUtil {
 	/***
 	 * 请求的网址url常量
 	 */
-	public static final String REQUEST_URL = "https://yq.aliyun.com/articles/2597";
+	public static final String REQUEST_URL = "https://mp.weixin.qq.com/s?__biz=MzA3ODQ0Mzg2OA==&mid=2649047850&idx=1&sn=7a4007cc9e6dd3db12fb783aed03d66f&chksm=87534719b024ce0f1e9d9aa1964acec8fdb02f486b7dd2dad642aedacb14c215d9edf338dbbe&mpshare=1&scene=1&srcid=06294AH7wIYsQX2mv6NkGCYX#rd";
 	/****
 	 * 图片保存路径
 	 */
-	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\image\\maven";
+	public static final String IMAGE_SAVE_PATH = "C:\\Users\\youqiang.xiong\\Desktop\\csdn\\gitlab";
 	
 	/***
 	 *  获取img标签正则表达式

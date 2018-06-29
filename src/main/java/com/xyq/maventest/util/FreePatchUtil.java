@@ -15,8 +15,16 @@ import java.util.List;
 
 /***
  * 
- * @author youqiang.xiong
- *
+* Project Name:maventest
+* <p>增量打包工具类 
+*
+* @ClassName: FreePatchUtil
+* @date 2018年6月29日  上午11:29:19
+*
+* @author youqiang.xiong
+* @version 1.0
+* @since  
+* @see
  */
 public class FreePatchUtil {
 
@@ -133,7 +141,7 @@ public class FreePatchUtil {
     }  
   
     /***
-     * 解析源路径名称，遍历此文件路径下是否存在这个类的内部类
+     * 解析源路径名称，遍历此文件路径下是否存在这个类的内部类<br>
      * 内部类编译后的格式一般是 OuterClassName$InnerClassName.class
      * @param sourceFullFileName 原路径
      * @param desFullFileName 目标路径
