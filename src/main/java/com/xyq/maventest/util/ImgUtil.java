@@ -32,10 +32,20 @@ import org.w3c.dom.Element;
 
 import com.sun.imageio.plugins.jpeg.JPEGImageWriter;
  
- 
-/** 此方法压缩不失真很好用
-* @author zhouqz 
-*/ 
+
+/***
+ * 
+* Project Name:maventest
+* <p>切图工具类<br> 
+*
+* @ClassName: ImgUtil
+* @date 2019年4月18日  下午5:12:06
+*
+* @author youqiang.xiong
+* @version 1.0
+* @since  
+* @see
+ */
 public class ImgUtil { 
  
       /**
@@ -43,30 +53,6 @@ public class ImgUtil {
      * @param args
      */
     public static void main(String args[]){ 
-        //读文件夹所有文件进行压缩处理
-//        String f = "/var/upload_bak/"; 
-//        File file = new File(f); 
-//        
-//        if(file.exists()) 
-//        { 
-//            File[] filelist = file.listFiles(); 
-//            for(int i = 0;i<filelist.length;i++) 
-//            { 
-//                String n = filelist[i].getName(); 
-//                Tosmallerpic(f,filelist[i],"_middle",n,185,160,(float)0.7); 
-//                Tosmallerpic(f,filelist[i],"_small",n,45,45,(float)0.7); 
-//                Tosmallerpic(f,filelist[i],"_smaller",n,116,100,(float)0.7); 
-//            } 
-//        } 
-         
-        //对一个文件进行压缩处理
-        
-     /* 
-    String url = "E:/cims/cimsdata/afr/20160922/"; 
-      String name  =  "query_image.jpg";
-      img_change(url,name);
-     */    
-//        ImgCompress("E:/cims/cimsdata/afr/20160922/1111111111.jpg");
     	String fileName = "C:\\Users\\youqiang.xiong\\Desktop\\底图\\poster";
     	
     	try {
@@ -76,7 +62,6 @@ public class ImgUtil {
             ImageIO.write(bi, "jpg", new File(fileName+"-222"+".jpg"));
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
@@ -349,7 +334,7 @@ public class ImgUtil {
      /****
       * 
      * Project Name: maventest
-     * <p>简单描述此方法作用 <br> 
+     * <p>根据指定位置来切图 <br> 
      *
      * @author youqiang.xiong
      * @date 2019年1月11日  下午5:24:13
